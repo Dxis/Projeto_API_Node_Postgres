@@ -6,7 +6,6 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar clientes em u
 
 ![Arquitetura](./Arquitetura.PNG)
 
-
 ## Instalação
 
 1. Clone este repositório para o seu ambiente local.
@@ -29,9 +28,10 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar clientes em u
 
 - **GET /clientes**: Retorna todos os clientes cadastrados.
 - **GET /clientes/:id**: Retorna um cliente específico com base no ID.
+- **GET /clientes?_ID_Cliente=...&_ID_ClienteTipo=...&_nrCpfCnpj=...&_nm_Cliente=...&_ID_Registro=...**: Retorna clientes com base nos parâmetros fornecidos. Você pode fornecer um ou mais parâmetros para filtrar os resultados.
 - **POST /clientes**: Adiciona um novo cliente ao banco de dados.
-- **PUT /clientes/:id**: Atualiza os dados de um cliente existente no banco de dados.
-- **DELETE /clientes/:id**: Remove um cliente do banco de dados.
+- **PATCH /clientes/:ID_Registro**: Atualiza os dados de um cliente existente no banco de dados.
+- **DELETE /clientes/:ID_Registro**: Remove um cliente do banco de dados.
 
 ## Tecnologias Utilizadas
 
@@ -49,11 +49,13 @@ Você pode testar os endpoints da API usando o Postman. Aqui estão os passos pa
 
 2. **GET /clientes/:id**: Envie uma solicitação GET para `/clientes/:id`, onde `:id` é o ID do cliente que você deseja recuperar.
 
-3. **POST /clientes**: Envie uma solicitação POST para `/clientes` com os dados do novo cliente no corpo da solicitação. Certifique-se de incluir os campos `nm_cliente`, `nrCpfCnpj`, `email` e `DtNascimento`.
+3. **GET /clientes?_ID_Cliente=...&_ID_ClienteTipo=...&_nrCpfCnpj=...&_nm_Cliente=...&_ID_Registro=...**: Envie uma solicitação GET para `/clientes` com os parâmetros desejados para filtrar os resultados.
 
-4. **PUT /clientes/:id**: Envie uma solicitação PUT para `/clientes/:id`, onde `:id` é o ID do cliente que você deseja atualizar. Inclua os campos que deseja atualizar no corpo da solicitação.
+4. **POST /clientes**: Envie uma solicitação POST para `/clientes` com os dados do novo cliente no corpo da solicitação. Certifique-se de incluir os campos `nm_cliente`, `nrCpfCnpj`, `email` e `DtNascimento`.
 
-5. **DELETE /clientes/:id**: Envie uma solicitação DELETE para `/clientes/:id`, onde `:id` é o ID do cliente que você deseja excluir.
+5. **PATCH /clientes/:ID_Registro**: Envie uma solicitação PATCH para `/clientes/:ID_Registro`, onde `:ID_Registro` é o ID do cliente que você deseja atualizar. Inclua os campos que deseja atualizar no corpo da solicitação.
+
+6. **DELETE /clientes/:ID_Registro**: Envie uma solicitação DELETE para `/clientes/:ID_Registro`, onde `:ID_Registro` é o ID do cliente que você deseja excluir.
 
 ## Validação de CPF/CNPJ e Data
 
