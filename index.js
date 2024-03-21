@@ -38,7 +38,7 @@ app.post('/clientes', async (request, response) => {
 });
 
 
-// Endpoint para atualizar um cliente
+// Endpoint para atualizar um cliente .
 app.patch("/clientes/:ID_Registro", async (request, response) => {
     try {
         const ID_Registro = parseInt(request.params.ID_Registro);
@@ -104,4 +104,3 @@ app.listen(process.env.PORT,() =>{
 
     console.group("APP esta rodando v2!");
 });
-

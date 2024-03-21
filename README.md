@@ -4,13 +4,17 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar clientes em u
 
 ## Arquitetura
 
-![Arquitetura](./Arquitetura.PNG)
+![Arquitetura](./Imagens/Arquitetura.PNG)
 
 ## Instalação
 
 1. Clone este repositório para o seu ambiente local.
 2. Certifique-se de ter o Node.js e o PostgreSQL instalados em sua máquina.
-	2.1 Na pasta DB temos os scripts para criar os objetos no banco de dados PostgreSQL.
+	</br>2.1 Na pasta DB temos os scripts para criar os objetos no banco de dados PostgreSQL (tabelas, Procs, Functions e Scripts para testes EXEC_001) .
+
+	![ScriptsBanco](./Imagens/DB_001.png)
+	![ScriptsBanco](./Imagens/DB_002.png)
+
 	
 3. Instale as dependências do projeto usando o seguinte comando:
     ```
