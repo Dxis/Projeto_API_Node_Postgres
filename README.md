@@ -10,9 +10,15 @@ Este projeto consiste no desenvolvimento de uma API para gerenciar clientes em u
 
 1. Clone este repositório para o seu ambiente local.
 2. Certifique-se de ter o Node.js e o PostgreSQL instalados em sua máquina.
+	2.1 Na pasta DB temos os scripts para criar os objetos no banco de dados PostgreSQL.
+	
 3. Instale as dependências do projeto usando o seguinte comando:
     ```
-    npm install
+	npm install express                     /*Framework de aplicativo da web NODE */
+	npm install dotenv  				    /*Biblioteca para variáveis de ambiente */
+	npm install pg                          /*Biblioteca PostgreSQL*/
+	npm install cpf-cnpj-validator date-fns /*Bibliotecas para validação cpf-cnpj*/
+	npm install date-fns                     /*Bibliotecas para validação de Datas*/
     ```
 4. Configure as variáveis de ambiente no arquivo `.env` conforme necessário.
 
